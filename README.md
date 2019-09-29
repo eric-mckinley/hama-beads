@@ -46,3 +46,7 @@ Local Image placing **reds** only
 python hamapi/hama_beads_creator.py -t local -i test_resources/images/streetfighter_sagat.png
 ```
 
+### Stepper Motor Pins
+
+![Pins](pi_board.png)
+
