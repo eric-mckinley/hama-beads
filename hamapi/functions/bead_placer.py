@@ -28,5 +28,3 @@ class HamaBoard:
               grid_pixel.py -self.current_y
         ]
 
-def place_bead(move):
-    print "Moving by across {}, down {}".format(move[0], move[1])

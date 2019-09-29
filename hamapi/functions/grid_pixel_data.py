@@ -35,7 +35,6 @@ def convert_image_to_grid_pixel_list(pixel_image, grid_size, has_grid):
             down_grid_index += 1
 
         across_grid_index += 1
-
     return pix_list
 
 
@@ -55,9 +54,7 @@ def find_closest_pixel_for_colour(pixel_list, colour, current_x, current_y):
             distance_to_move = calculate_distance(grid_pixel.px, grid_pixel.py, current_x, current_y)
 
             if not pixel_positioned and matched_colour:
-                # print("THRESHOLD {} Considering move of {}".format(threshold, distance_to_move))
                 if distance_to_move < shortest_move:
-                    # print("Short move was {} now {}".format(shortest_move, distance_to_move))
                     shortest_move = distance_to_move
                     found_pixel = grid_pixel
         if found_pixel is not None:
@@ -65,14 +62,11 @@ def find_closest_pixel_for_colour(pixel_list, colour, current_x, current_y):
             return found_pixel
 
         threshold += 1
-
-
     return found_pixel
 
 
 def calculate_distance(x1, y1, x2, y2):
     return abs(x1 -x2) + abs(y1 - y2)
-
 
 
 def has_unplaced_pixels(pixel_list):
