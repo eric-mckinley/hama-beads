@@ -35,10 +35,12 @@ class StepperMotor:
     def move_by(self, grids_to_move):
         if grids_to_move < 0:
             moves = abs(grids_to_move)
-            for i in range(moves):
+            for i in range(0, moves):
+                print("Move forward {} ".format(i))
                 self.move_backwards()
         elif grids_to_move > 0:
-            for i in range(grids_to_move):
+            for i in range(0, grids_to_move):
+                print("Move backwards {} ".format(i))
                 self.move_forwards()
 
     def move_forwards(self):
