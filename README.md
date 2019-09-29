@@ -22,7 +22,7 @@ Raspberry Pi Project (Work in Progress)
 For images -> 
 
 ````bash
- $ pip install motioneye
+ $ pip --no-cache-dir install motioneye
 ````
 
 **Install requests module**

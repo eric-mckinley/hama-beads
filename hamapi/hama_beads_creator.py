@@ -9,6 +9,8 @@ from functions.stepper_motor import StepperMotor
 from functions.stepper_motor import setup_pins
 from functions.stepper_motor import reset_pins
 
+setup_pins()
+
 args = get_program_arguments()
 
 img = load_image(args.image_type, args.image_path)
@@ -27,7 +29,6 @@ hama_board = HamaBoard(grid_pixel_list, 50, 50)
 
 x_axis_stepper_motor = StepperMotor([7,11,13,15])
 y_axis_stepper_motor = StepperMotor([31,33,35,37])
-setup_pins()
 
 while hama_board.is_incomplete() and iteration < max_iterations :
     color = get_next_bead_color()
