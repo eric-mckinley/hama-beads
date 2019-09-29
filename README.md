@@ -4,13 +4,33 @@ Raspberry Pi Project (Work in Progress)
 
 ### Steps
 
+
+
+**Install pip**
+
+ 
+```bash
+ $ sudo apt-get update
+ $ sudo apt-get install python-pip
+ 
+ $ sudo apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev
+ ```
+
+
 **Install PIL module**
 
-For images -> `sudo pip install Pillow`
+For images -> 
+
+````bash
+ $ pip install motioneye
+````
 
 **Install requests module**
 
-For http load -> `sudo pip install requests`
+For http load -> 
+```bash
+$ pip install requests
+```
 
 ### Run Test
 
