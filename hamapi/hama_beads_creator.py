@@ -27,8 +27,8 @@ max_iterations = 100
 
 hama_board = HamaBoard(grid_pixel_list, 50, 50)
 
-x_axis_stepper_motor = StepperMotor([7,11,13,15])
-y_axis_stepper_motor = StepperMotor([31,33,35,37])
+x_axis_stepper_motor = StepperMotor([7,11,13,15], "X")
+y_axis_stepper_motor = StepperMotor([31,33,35,37], "Y")
 
 while hama_board.is_incomplete() and iteration < max_iterations :
     color = get_next_bead_color()
