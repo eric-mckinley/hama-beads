@@ -1,6 +1,7 @@
 import random
 from pixel_checker import is_similar_coloured_pixel
 
+
 def has_onepixel_grid(pixelImage, grid_size, mx, my):
     mid_first_grid = round(grid_size / 2, 0)
     black = (0, 0, 0)
@@ -13,6 +14,7 @@ def has_onepixel_grid(pixelImage, grid_size, mx, my):
         if not is_similar_coloured_pixel(pixelImage[mid_first_grid, y], black, threshold):
             return False
     return True
+
 
 def calculate_grid_size(pixelImage, sx, sy, mx, my):
     start_pixel = pixelImage[sx, sy]
@@ -49,31 +51,30 @@ def calculate_grid_size(pixelImage, sx, sy, mx, my):
 
     if left_count + right_count == up_count + down_count:
         start_pixel = 1
-        if start_pixel + left_count + right_count > 20:
-            print
         return start_pixel + left_count + right_count
     else:
         return -1
 
-def calculate_average_grid_size(pixelImage, img_size, sampleCount):
+
+def calculate_average_grid_size(pixel_image, img_size, sample_count):
     image_width = img_size[0]
     image_height = img_size[1]
 
-    min_expected_gridsize = 5
-    max_expected_gridsize = 50
+    min_expected_grid_size = 5
+    max_expected_grid_size = 50
 
-    sampledCount = 0
-    sampledCountTotal = 0
+    sampled_count = 0
+    sampled_count_total = 0
 
-    for x in range(0, sampleCount):
+    for x in range(0, sample_count):
         rx = random.randint(1, image_width - 2)
         ry = random.randint(1, image_height - 2)
-        grid_size = calculate_grid_size(pixelImage, rx, ry, image_width, image_height)
-        if min_expected_gridsize < grid_size < max_expected_gridsize:
-            sampledCountTotal += grid_size
-            sampledCount += 1
+        grid_size = calculate_grid_size(pixel_image, rx, ry, image_width, image_height)
+        if min_expected_grid_size < grid_size < max_expected_grid_size:
+            sampled_count_total += grid_size
+            sampled_count += 1
 
-    if sampledCount > 0:
-        return int(round(sampledCountTotal / sampledCount))
+    if sampled_count > 0:
+        return int(round(sampled_count_total / sampled_count))
     else:
         return -1
