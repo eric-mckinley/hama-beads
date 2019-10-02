@@ -1,8 +1,8 @@
 class HamaBoard:
     def __init__(self, grid_pixel_list, board_grid_across, board_grid_down):
         self.grid_pixel_list = grid_pixel_list
-        self.current_x = 0
-        self.current_y = 0
+        self.current_x = 6
+        self.current_y = 20
         for grid_pixel in self.grid_pixel_list:
             assert (grid_pixel.px <= board_grid_across), "Board not wide enough for pixel imaae {}".format(grid_pixel.px)
             assert (grid_pixel.py <= board_grid_down), "Board not tall enough for pixel imaage {}".format(grid_pixel.py)
