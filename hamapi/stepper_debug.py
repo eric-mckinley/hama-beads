@@ -11,11 +11,27 @@ y_axis_stepper_motor = StepperMotor([31,33,35,37], "Y")
 x_axis_stepper_motor.partial_move_backwards(4)
 x_axis_stepper_motor.partial_move_forwards(2)
 x_axis_stepper_motor.partial_move_backwards(8)
-x_axis_stepper_motor.partial_move_backwards(2)
+x_axis_stepper_motor.partial_move_forwards(2)
 
 y_axis_stepper_motor.partial_move_backwards(4)
 y_axis_stepper_motor.partial_move_forwards(2)
 y_axis_stepper_motor.partial_move_backwards(8)
-y_axis_stepper_motor.partial_move_backwards(2)
+y_axis_stepper_motor.partial_move_forwards(2)
+
+
+x_axis_stepper_motor.partial_move_backwards(16)
+x_axis_stepper_motor.partial_move_forwards(16)
+x_axis_stepper_motor.partial_move_backwards(16)
+x_axis_stepper_motor.partial_move_forwards(16)
+x_axis_stepper_motor.partial_move_backwards(16)
+x_axis_stepper_motor.partial_move_forwards(16)
+
+y_axis_stepper_motor.partial_move_backwards(16)
+y_axis_stepper_motor.partial_move_forwards(16)
+y_axis_stepper_motor.partial_move_backwards(16)
+y_axis_stepper_motor.partial_move_forwards(16)
+y_axis_stepper_motor.partial_move_backwards(16)
+y_axis_stepper_motor.partial_move_forwards(16)
+
 
 reset_pins()
