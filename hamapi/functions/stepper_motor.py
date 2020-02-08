@@ -7,10 +7,10 @@ class StepperMotor:
         self.control_pins = control_pins
         self.axis_name = axis_name
 
+        GPIO.setwarnings(False)
         for pin in self.control_pins:
             GPIO.setup(pin, GPIO.OUT)
             GPIO.output(pin, 0)
-
         self.forward_segments =  [
             [1,0,0,0],
             [1,1,0,0],
@@ -59,8 +59,8 @@ class StepperMotor:
     def move(self, pins, movement_seg, rotation_fragment):
 
         full_move = 512
-        partial_move = full_move / rotation_fragment
-
+        partial_move = int(full_move * rotation_fragment)
+        print('Partial move is {}"'.format(partial_move))
         for i in range(partial_move):
             for half_step in range(8):
                 for pin in range(4):
