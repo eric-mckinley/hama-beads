@@ -64,7 +64,7 @@ class StepperMotor:
 
         full_move = 512
         partial_move = int(full_move * rotation_fragment)
-        print('Partial move is {}"'.format(partial_move))
+        print('Partial move is {}'.format(partial_move))
         for i in range(partial_move):
             for half_step in range(8):
                 for pin in range(4):
